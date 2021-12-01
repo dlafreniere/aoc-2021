@@ -1,0 +1,17 @@
+{
+  "name": "aoc-2021",
+  "description": "https://adventofcode.com/2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dlafreniere/aoc-2021.git",
+  "author": "Devin Lafreniere <dlafreniere@coveo.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^16.11.11",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0"
+  }
+}
