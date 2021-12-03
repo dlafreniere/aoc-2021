@@ -1,12 +1,8 @@
-import { assert } from "console";
+import { readInput } from "../utils";
 import fs from "fs";
 import path from "path";
 
-const depths = fs
-  .readFileSync(path.resolve(__dirname, "input.txt"))
-  .toString()
-  .split("\n");
-assert(depths.length > 0);
+const depths = readInput(__dirname);
 
 let increases = 0;
 const lines = [depths[0] + " (N/A - no previous measurement)"];

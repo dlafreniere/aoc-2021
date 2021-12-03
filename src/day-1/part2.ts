@@ -1,13 +1,8 @@
-import { assert } from "console";
 import fs from "fs";
 import path from "path";
+import { readInput } from "../utils";
 
-const depths = fs
-  .readFileSync(path.resolve(__dirname, "input.txt"))
-  .toString()
-  .split("\n")
-  .map(d => parseInt(d, 10));
-assert(depths.length > 0);
+const depths = readInput(__dirname).map((d) => parseInt(d, 10));
 
 const WINDOW_SIZE = 3;
 
@@ -16,7 +11,7 @@ const sum3 = (array: number[], start: number) =>
 
 let increases = 0;
 
-const lines = [sum3(depths, WINDOW_SIZE-1) + " (N/A - no previous sum)"];
+const lines = [sum3(depths, WINDOW_SIZE - 1) + " (N/A - no previous sum)"];
 for (let i = WINDOW_SIZE; i < depths.length; ++i) {
   let currentSum = sum3(depths, i);
   let previousSum = sum3(depths, i - 1);
